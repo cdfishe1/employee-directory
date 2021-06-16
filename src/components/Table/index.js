@@ -1,26 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+// import API from "../../utils/API";
 
-function Table(props) {
-  return (
-    <div>
-      <table className="table table-bordered table-sm table-fixed">
-       
-        <thead>
-          <tr>
-            <th className="col-2"><button onClick={props.sortUsers}>Name (Sort by Last Name)</button></th>
-            <th className="col-2">Email</th>
-          </tr>
-        </thead>
+function Table () {
+    const [state, setState] = useState({
+        name: "",
+        email: "",
+    });
 
-        <tbody>
-            <tr>
-            <td className="col-2">First Name Last Name</td>
-            <td className="col-2">Email</td>
-            </tr>
-        </tbody>
+    useEffect(() => {
+        fetch('https://randomuser.me/api/?results=50')
+        .then(function (response) {
+        return response.json();
+        })
+        .then(function (data) {
+        console.log(data);
+        setState(data);
+        });
 
-      </table>
-    </div>
-);
-;}
+    }, []);
+
+    // return null;
+
+    return (
+        <div>
+          <table className="table">
+           
+            <thead>
+              <tr>
+                <th className="col-2">Name</th>
+                <th className="col-2">Email</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                <td className="col-2">Charles Fisher</td>
+                <td className="col-2">charles@mail.com</td>
+                </tr>
+            </tbody>
+    
+          </table>
+        </div>
+    );
+}
+
+
 export default Table;
