@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
-import Search from './components/Search';
+// import Search from './components/Search';
 import Table from './components/Table';
 
 
@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <div className="container"></div>
       <Header />
-      <Search />
       <Table />
     </div>
   );
