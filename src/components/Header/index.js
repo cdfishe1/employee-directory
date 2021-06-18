@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Render header
 function Header() {
     return (
         <header className='headerStyle bg-primary text-light p-3'>
