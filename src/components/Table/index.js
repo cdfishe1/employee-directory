@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Search from "../Search"
-// import API from "../../utils/API";
+
 
 function Table () {
     const [state, setState] = useState([]);
-    
+    const [originalState, setOriginalState] = useState([]);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
-      // API.getEmployees
         fetch('https://randomuser.me/api/?results=200&nat=us')
         .then(function (response) {
         return response.json();
@@ -15,15 +15,30 @@ function Table () {
         .then(function (data) {
         console.log(data);
         setState(data.results);
+        setOriginalState(data.results)
         });
 
     }, []);
 
+    function handleInputChange (event) {
+      const {value} = event.target
+      setSearch(value);
+
+      const filteredState = originalState.filter((person) => {
+        return person.name.last.toLowerCase().includes(value.toLowerCase())
+      })
+      
+      setState(filteredState);
+
+    };
 
     return (
         <div>
-          <Search />
-          <table className="table">
+          <Search
+         handleInputChange={handleInputChange}
+          search = {search}
+           />
+          <table className="table table-striped">
            
             <thead>
               <tr>

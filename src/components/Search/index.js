@@ -6,7 +6,8 @@ const Search = (props) => {
   return (
     <nav className="navbar navbar-light bg-light justify-content-center">
       <form className="form-inline m-2">
-        <input/>
+        <label for='filter' className="mr-1">Filter by Last Name</label>
+        <input type='text' name='filter' className="ml-1" onChange={props.handleInputChange} value={props.search}/>
       </form>
     </nav>
   );
