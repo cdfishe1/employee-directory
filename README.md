@@ -7,14 +7,14 @@
 An employee directory using React that can by sorted and filtered.
 
 ## Table of Contents
-* [Budget Tracker](#employee-directory)
+* [Employee Directory](#employee-directory)
 * [Deployment](#deployment)
 * [Scope of Project](#scope-of-project)
 * [Installation](#installation)
 * [Credits](#credits)
 * [License](#license)
 
-## Budget Tracker
+## Employee Directory
 
 ### Screenshot
 ![Screenshot](screenshot.png)
