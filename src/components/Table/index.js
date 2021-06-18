@@ -35,7 +35,7 @@ function Table () {
     };
 
     //sort the name column alphabetically
-    function sortTable () {
+    function sortNames () {
       const stateCopy = [...state];
       const updateSort = stateCopy.sort((a, b) => {
         const nameA = a.name.last;
@@ -64,9 +64,7 @@ function Table () {
            
             <thead>
               <tr>
-                <th className="col"
-                onClick={sortTable}
-                >Name</th>
+                <th className="col"><button onClick = {sortNames}>Sort by Last Name</button></th>
                 <th className="col">Email</th>
                 <th className="col">Cell Phone</th>
                 <th className="col">Picture</th>
@@ -80,7 +78,7 @@ function Table () {
                           <td className="col">{person.name.last} {person.name.first}</td>
                           <td className="col">{person.email}</td>
                           <td className="col">{person.cell}</td>
-                          <td className="col"><img src={person.picture.thumbnail} alt=""></img></td>
+                          <td className="col"><img src={person.picture.thumbnail} alt="employee"></img></td>
                         </tr>
                       ) 
                     })
