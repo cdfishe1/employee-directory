@@ -17,7 +17,7 @@ An employee directory using React that can by sorted and filtered.
 ## Budget Tracker
 
 ### Screenshot
-![Screenshot](public/screenshot.png)
+![Screenshot](screenshot.png)
 
 
 ## Deployment
