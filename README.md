@@ -22,7 +22,7 @@ An employee directory using React that can by sorted and filtered.
 
 ## Deployment
 
-Site deployed at [Budget Tracker](https://cdfishe1-budgettracker.herokuapp.com/)
+Site deployed at [Employee Directory](https://cdfishe1.github.io/employee-directory/)
 
 ## Scope of Project
 
